@@ -1,0 +1,59 @@
+@import 'app/styles/theme';
+
+.container {
+  border-top: $border-width solid $border-secondary-color;
+}
+
+.row {
+  border-bottom: $border-width solid $border-primary-color;
+   &:last-child {
+     border-bottom: 0;
+   }
+}
+
+.key {
+  display: inline-block;
+  width: $key-width;
+  height: $key-height;
+  background-color: $normal-key-bg-color;
+  color: $normal-key-text-color;
+  border: 0;
+  border-right: $border-width solid $border-primary-color;
+  cursor: pointer;
+  font-size: 30px;
+
+  &:focus {
+    box-shadow: none;
+    outline: none;
+  }
+
+  &:hover {
+    background-color: darken($color: $normal-key-bg-color, $amount: 3)
+  }
+
+  &:last-child {
+    border-right: 0;
+  }
+
+  &.medium {
+    width: $key-width*2;
+  }
+
+  &.large {
+    width: $key-width*3;
+  }
+
+  &.operator,
+  &.submit {
+    background-color: $operator-key-bg-color;
+    color: $operator-key-text-color;
+
+    &:hover {
+      background-color: darken($color: $operator-key-bg-color, $amount: 5)
+    }
+  }
+
+  &.clear {
+    color: $text-secondary-color;
+  }
+}

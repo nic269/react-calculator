@@ -1,0 +1,31 @@
+@import 'app/styles/theme';
+
+.container {
+  align-items: center;
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  width: 100vw;
+  flex-direction: column;
+}
+
+.title {
+  position: relative;
+  text-align: center;
+  text-transform: uppercase;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-size: 32px;
+  font-weight: 400;
+
+  &:after {
+    content: "";
+    height: 1px;
+    width: 4rem;
+    position: absolute;
+    bottom: -1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: $page-title-color;
+  }
+}
