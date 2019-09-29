@@ -1,0 +1,27 @@
+// color palette
+$white: #fff;
+$black: #000;
+$black-1: #2a2a2a;
+$grey: #808080;
+$grey-1: #565656;
+$red: #ff0000;
+$red-1: #f2264f;
+$red-2: #aa4559;
+$red-3: #433437;
+
+
+$text-primary-color: $black-1;
+$text-secondary-color: $grey-1;
+$calculator-bg-color: $white;
+$calculator-screen-bg-color: $red-3;
+$border-primary-color: $red-2;
+$border-secondary-color: $red-1;
+$border-width: 1px;
+$operator-bg-color: $red-1;
+$key-width: 72px;
+$key-height: 72px;
+$num-of-keys-in-a-row: 4;
+$normal-key-bg-color: $white;
+$normal-key-text-color: $text-primary-color;
+$operator-key-bg-color: $red-1;
+$operator-key-text-color: $white;

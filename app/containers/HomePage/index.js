@@ -6,13 +6,21 @@
  */
 
 import React from 'react';
-import { FormattedMessage } from 'react-intl';
-import messages from './messages';
+import { Helmet } from 'react-helmet';
+
+import Calculator from 'containers/Calculator/Loadable';
+import styles from './HomePage.scss';
 
 export default function HomePage() {
   return (
-    <h1>
-      <FormattedMessage {...messages.header} />
-    </h1>
+    <>
+      <Helmet>
+        <title>Calculator application</title>
+        <meta name="description" content="Calculator application" />
+      </Helmet>
+      <div className={styles.container}>
+        <Calculator />
+      </div>
+    </>
   );
 }

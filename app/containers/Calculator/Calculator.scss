@@ -1,0 +1,11 @@
+@import 'app/styles/theme';
+
+.container {
+  background-color: $calculator-bg-color;
+  border: $border-width solid $border-primary-color;
+  color: $white;
+  font-size: 40px;
+  line-height: 1;
+  text-align: right;
+  width: calc((#{$key-width}*#{$num-of-keys-in-a-row}) + (#{$border-width}*2));
+}
