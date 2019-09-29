@@ -1,0 +1,118 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<KeyPad /> Should render and match the snapshot 1`] = `
+<div>
+  <div>
+    <button
+      class=""
+      title="Clear all (or press Esc)"
+      type="button"
+    >
+      clear
+    </button>
+    <button
+      class=""
+      title="Divide (or press /)"
+      type="button"
+    >
+      /
+    </button>
+  </div>
+  <div>
+    <button
+      class=""
+      type="button"
+    >
+      1
+    </button>
+    <button
+      class=""
+      type="button"
+    >
+      2
+    </button>
+    <button
+      class=""
+      type="button"
+    >
+      3
+    </button>
+    <button
+      class=""
+      title="Multiply (or press *)"
+      type="button"
+    >
+      *
+    </button>
+  </div>
+  <div>
+    <button
+      class=""
+      type="button"
+    >
+      4
+    </button>
+    <button
+      class=""
+      type="button"
+    >
+      5
+    </button>
+    <button
+      class=""
+      type="button"
+    >
+      6
+    </button>
+    <button
+      class=""
+      title="Subtract (or press -)"
+      type="button"
+    >
+      -
+    </button>
+  </div>
+  <div>
+    <button
+      class=""
+      type="button"
+    >
+      7
+    </button>
+    <button
+      class=""
+      type="button"
+    >
+      8
+    </button>
+    <button
+      class=""
+      type="button"
+    >
+      9
+    </button>
+    <button
+      class=""
+      title="Add (or press +)"
+      type="button"
+    >
+      +
+    </button>
+  </div>
+  <div>
+    <button
+      class=""
+      type="button"
+    >
+      0
+    </button>
+    <button
+      class=""
+      title="Equal (or press Enter)"
+      type="button"
+    >
+      ＝
+    </button>
+  </div>
+</div>
+`;
