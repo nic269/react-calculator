@@ -19,6 +19,11 @@ export default function HomePage() {
         <meta name="description" content="Calculator application" />
       </Helmet>
       <div className={styles.container}>
+        <h2 className={styles.title}>Calculator</h2>
+        <p className={styles.desc}>
+          This is a simple calculator application, you can click on the buttons
+          of application or press keyboard also.
+        </p>
         <Calculator />
       </div>
     </>

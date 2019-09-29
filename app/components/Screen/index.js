@@ -12,7 +12,9 @@ import styles from './Screen.scss';
 
 const Screen = ({ value }) => (
   <div className={styles.container}>
-    <Textfit mode="single">{value}</Textfit>
+    <Textfit mode="single" forceWidth className={styles.textfit} max={60}>
+      {value}
+    </Textfit>
   </div>
 );
 

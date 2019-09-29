@@ -8,4 +8,5 @@
   line-height: 1;
   text-align: right;
   width: calc((#{$key-width}*#{$num-of-keys-in-a-row}) + (#{$border-width}*2));
+  margin-top: 30px;
 }
