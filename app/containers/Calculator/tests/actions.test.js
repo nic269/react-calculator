@@ -1,5 +1,10 @@
-import { getResult, clearResult, updateFormula } from '../actions';
-import { GET_RESULT, CLEAR_RESULT, UPDATE_FORMULA } from '../constants';
+import { getResult, clearResult, deleteAg, updateFormula } from '../actions';
+import {
+  GET_RESULT,
+  CLEAR_RESULT,
+  DELETE_AG,
+  UPDATE_FORMULA,
+} from '../constants';
 
 describe('Caculator actions', () => {
   describe('getResult Action', () => {
@@ -17,6 +22,15 @@ describe('Caculator actions', () => {
         type: CLEAR_RESULT,
       };
       expect(clearResult()).toEqual(expected);
+    });
+  });
+
+  describe('deleteAg Action', () => {
+    it('has a type of DELETE_AG', () => {
+      const expected = {
+        type: DELETE_AG,
+      };
+      expect(deleteAg()).toEqual(expected);
     });
   });
 

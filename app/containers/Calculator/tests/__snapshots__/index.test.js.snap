@@ -6,7 +6,7 @@ exports[`<Caculator /> Should render and match the snapshot 1`] = `
     value="0"
   />
   <mockedkeypad
-    layout="[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object]"
+    layout="[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object]"
   />
 </div>
 `;

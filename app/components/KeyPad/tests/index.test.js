@@ -36,7 +36,7 @@ describe('<KeyPad />', () => {
 
   it('Should trigger onChange when a button has been clicked', () => {
     const { getByText } = render(<KeyPad {...props} />);
-    fireEvent.click(getByText('clear'));
+    fireEvent.click(getByText('AC'));
     expect(props.onChange).toHaveBeenCalledWith('Escape');
   });
 });

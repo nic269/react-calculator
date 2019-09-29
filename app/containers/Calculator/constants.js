@@ -7,6 +7,7 @@ import _flattenDeep from 'lodash/flattenDeep';
 
 export const GET_RESULT = 'app/Calculator/GET_RESULT';
 export const CLEAR_RESULT = 'app/Calculator/CLEAR_RESULT';
+export const DELETE_AG = 'app/Calculator/DELETE_AG';
 export const UPDATE_FORMULA = 'app/Calculator/UPDATE_FORMULA';
 
 export const ADD_KEY = '+';
@@ -14,21 +15,30 @@ export const SUB_KEY = '-';
 export const MUL_KEY = '*';
 export const DIV_KEY = '/';
 export const CLEAR_GROUP = 'clear';
+export const DELETE_GROUP = 'delete';
 export const OPERATOR_GROUP = 'operator';
 export const SUBMIT_GROUP = 'submit';
 export const NUMBER_GROUP = 'number';
 export const OPERATION_KEYS = [ADD_KEY, SUB_KEY, MUL_KEY, DIV_KEY];
 export const SUBMIT_KEYS = ['Enter', '='];
 export const CLEAR_KEYS = ['Escape'];
+export const DELETE_KEYS = ['Backspace'];
 export const LAYOUT = [
   [
     {
       id: '1',
-      name: 'clear',
+      name: 'AC',
       group: CLEAR_GROUP,
-      size: 'large',
+      size: 'medium',
       key: 'Escape',
       description: 'Clear all (or press Esc)',
+    },
+    {
+      id: '1_1',
+      name: '⇤',
+      group: DELETE_GROUP,
+      key: 'Backspace',
+      description: 'Delete (or press Backspace)',
     },
     {
       id: '2',
@@ -124,14 +134,13 @@ export const LAYOUT = [
       id: '15',
       name: '0',
       group: NUMBER_GROUP,
-      size: 'medium',
+      size: 'large',
       key: '0',
     },
     {
       id: '16',
       name: '＝',
       group: SUBMIT_GROUP,
-      size: 'medium',
       key: '=',
       description: 'Equal (or press Enter)',
     },
@@ -140,4 +149,5 @@ export const LAYOUT = [
 export const SUPPORTED_KEYS = [
   ..._flattenDeep(LAYOUT).map(item => item.key),
   'Enter',
+  'Backspace',
 ];

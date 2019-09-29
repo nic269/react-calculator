@@ -7,6 +7,7 @@ import produce from 'immer';
 import {
   GET_RESULT,
   CLEAR_RESULT,
+  DELETE_AG,
   UPDATE_FORMULA,
   NUMBER_GROUP,
   OPERATOR_GROUP,
@@ -64,6 +65,21 @@ const calculatorReducer = (state = initialState, action) =>
       }
       case CLEAR_RESULT:
         return initialState;
+      case DELETE_AG:
+        if (draft.front && draft.operator && draft.back) {
+          draft.back =
+            draft.back.length > 1
+              ? draft.back.slice(0, draft.back.length - 1)
+              : '';
+        } else if (draft.front && draft.operator && !draft.back) {
+          draft.operator = '';
+        } else if (draft.front && !draft.operator) {
+          draft.front =
+            draft.front.length > 1
+              ? draft.front.slice(0, draft.front.length - 1)
+              : initialState.front;
+        }
+        break;
       case UPDATE_FORMULA:
         if (action.payload.group === NUMBER_GROUP) {
           if (!draft.operator) {

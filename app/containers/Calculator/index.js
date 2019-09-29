@@ -13,7 +13,7 @@ import { compose } from 'redux';
 import { useInjectReducer } from 'utils/injectReducer';
 import KeyPad from 'components/KeyPad';
 import Screen from 'components/Screen';
-import { getResult, clearResult, updateFormula } from './actions';
+import { getResult, clearResult, deleteAg, updateFormula } from './actions';
 import { makeSelectResult } from './selectors';
 import reducer from './reducer';
 import {
@@ -22,7 +22,9 @@ import {
   OPERATION_KEYS,
   CLEAR_KEYS,
   SUBMIT_KEYS,
+  DELETE_KEYS,
   CLEAR_GROUP,
+  DELETE_GROUP,
   SUBMIT_GROUP,
   NUMBER_GROUP,
   OPERATOR_GROUP,
@@ -31,6 +33,7 @@ import styles from './Calculator.scss';
 
 const getGroupOfKey = key => {
   if (CLEAR_KEYS.includes(key)) return CLEAR_GROUP;
+  if (DELETE_KEYS.includes(key)) return DELETE_GROUP;
   if (SUBMIT_KEYS.includes(key)) return SUBMIT_GROUP;
   if (OPERATION_KEYS.includes(key)) return OPERATOR_GROUP;
   return NUMBER_GROUP;
@@ -81,6 +84,9 @@ export const mapDispatchToProps = dispatch => ({
     switch (group) {
       case CLEAR_GROUP:
         dispatch(clearResult());
+        break;
+      case DELETE_GROUP:
+        dispatch(deleteAg());
         break;
       case SUBMIT_GROUP:
         dispatch(getResult());

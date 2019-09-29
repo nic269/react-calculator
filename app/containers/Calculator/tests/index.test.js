@@ -14,7 +14,7 @@ import { browserHistory } from 'react-router-dom';
 
 import configureStore from '../../../configureStore';
 import { Calculator, mapDispatchToProps } from '../index';
-import { getResult, clearResult, updateFormula } from '../actions';
+import { getResult, clearResult, deleteAg, updateFormula } from '../actions';
 import { NUMBER_GROUP, OPERATOR_GROUP } from '../constants';
 
 jest.mock('components/KeyPad', () => 'MockedKeyPad');
@@ -89,6 +89,13 @@ describe('mapDispatchToProps', () => {
       const result = mapDispatchToProps(dispatch);
       result.calculatorHandler('Escape');
       expect(dispatch).toHaveBeenCalledWith(clearResult());
+    });
+
+    it('should call deleteAg', () => {
+      const dispatch = jest.fn();
+      const result = mapDispatchToProps(dispatch);
+      result.calculatorHandler('Backspace');
+      expect(dispatch).toHaveBeenCalledWith(deleteAg());
     });
 
     it('should call updateFormula with number', () => {

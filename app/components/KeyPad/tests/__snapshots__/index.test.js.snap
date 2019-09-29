@@ -8,7 +8,14 @@ exports[`<KeyPad /> Should render and match the snapshot 1`] = `
       title="Clear all (or press Esc)"
       type="button"
     >
-      clear
+      AC
+    </button>
+    <button
+      class=""
+      title="Delete (or press Backspace)"
+      type="button"
+    >
+      ⇤
     </button>
     <button
       class=""

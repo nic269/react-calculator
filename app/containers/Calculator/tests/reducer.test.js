@@ -1,6 +1,6 @@
 import produce from 'immer';
 import caculatorReducer, { initialState } from '../reducer';
-import { getResult, clearResult, updateFormula } from '../actions';
+import { getResult, clearResult, deleteAg, updateFormula } from '../actions';
 import { NUMBER_GROUP, OPERATOR_GROUP } from '../constants';
 
 /* eslint-disable default-case, no-param-reassign */
@@ -80,6 +80,45 @@ describe('caculatorReducer', () => {
       };
 
       expect(caculatorReducer(ownState, clearResult())).toEqual(state);
+    });
+  });
+
+  describe('deleteAg', () => {
+    it('shoudl handle deleteAg action', () => {
+      const ownState = {
+        front: '5',
+        operator: '+',
+        back: '34',
+      };
+      const expectedResult1 = {
+        ...ownState,
+        back: '3',
+      };
+      const expectedResult2 = {
+        ...ownState,
+        back: '',
+      };
+      const expectedResult3 = {
+        ...ownState,
+        back: '',
+        operator: '',
+      };
+      const expectedResult4 = {
+        front: initialState.front,
+        operator: '',
+        back: '',
+      };
+
+      expect(caculatorReducer(ownState, deleteAg())).toEqual(expectedResult1);
+      expect(caculatorReducer(expectedResult1, deleteAg())).toEqual(
+        expectedResult2,
+      );
+      expect(caculatorReducer(expectedResult2, deleteAg())).toEqual(
+        expectedResult3,
+      );
+      expect(caculatorReducer(expectedResult3, deleteAg())).toEqual(
+        expectedResult4,
+      );
     });
   });
 
